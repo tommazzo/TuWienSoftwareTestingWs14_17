@@ -20,6 +20,14 @@ public class SportsIdSeleniumHelper {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
+	public void login(String userName, String password){
+		goToLoginPage();
+		fillUsernameField(userName);
+		fillPasswordField(password);
+		clickLoginButton();
+		welcomePageIsShown();
+	}
+	
 	public void goToLoginPage(){
 	    driver.get(baseUrl + "/#pages.login");
 	}
@@ -41,8 +49,6 @@ public class SportsIdSeleniumHelper {
 	public void welcomePageIsShown(){
 		assertEquals(driver.findElement(By.cssSelector("#content-inner > div:nth-child(1) > h1:nth-child(1)")).getText(), "Welcome ADMIN A GRUPPE 27!");
 	}
-	
-	
 	
 	public void shutDown() {
 		SeleniumWebDriver.closeDriver();
