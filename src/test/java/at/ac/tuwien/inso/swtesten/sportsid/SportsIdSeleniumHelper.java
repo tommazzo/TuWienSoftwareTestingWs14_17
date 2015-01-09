@@ -32,6 +32,18 @@ public class SportsIdSeleniumHelper {
 	    driver.get(baseUrl + "/#pages.login");
 	}
 	
+	public void goToWelcomePage(){
+		driver.get(baseUrl + "/admin.html#pages.welcome");
+	}
+	
+	public void goToCreateNewMemberPage(){
+		driver.get(baseUrl + "/admin.html#pages.member.detail");
+	}
+	
+	public void goToMembersList(){
+		driver.get(baseUrl + "admin.html#pages.member.list");
+	}
+	
 	public void fillUsernameField(String userName){
 	    driver.findElement(By.id("input-username")).clear();
 	    driver.findElement(By.id("input-username")).sendKeys(userName);
@@ -50,6 +62,7 @@ public class SportsIdSeleniumHelper {
 		assertEquals(driver.findElement(By.cssSelector("#content-inner > div:nth-child(1) > h1:nth-child(1)")).getText(), "Welcome ADMIN A GRUPPE 27!");
 	}
 	
+	// Registration
 	public void shutDown() {
 		SeleniumWebDriver.closeDriver();
 	}
