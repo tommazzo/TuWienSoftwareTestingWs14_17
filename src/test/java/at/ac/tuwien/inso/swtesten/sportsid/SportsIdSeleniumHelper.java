@@ -11,12 +11,12 @@ import at.ac.tuwien.inso.swtesten.util.SeleniumWebDriver;
 
 public class SportsIdSeleniumHelper {
 
-	private WebDriver driver;
-	private String baseUrl;
+	public WebDriver driver;
+	public String baseUrl;
 
 	public void setUp() {
 		driver = SeleniumWebDriver.getDriver();
-		baseUrl = "http://sportsid.risedev.at/";
+		baseUrl = "https://sportsid.risedev.at";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
