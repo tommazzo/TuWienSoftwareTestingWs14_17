@@ -1,0 +1,7 @@
+1.At the beginning we have get known all the parameters of this sistem. 
+2. Each of us has created some new members, and found some bugs which shows up meanwhile.
+3. Then we have started whit making some test cases which we have tested manualy.
+4. For the automated tests we have choosed User Login because it is the most priority use case,
+ and we choosed also Adding new Member because it gonna be make a lot of users in the system.  
+
+
